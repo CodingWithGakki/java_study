@@ -1,6 +1,12 @@
+import java.util.Arrays;
 public class Test {
+
     public static void main(String[] args) {
-        System.out.println("github2");
-        System.out.println("github1");
+int[] numbers={5,1,66,12,27,96};
+Arrays.sort(numbers);
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+
+        }
     }
 }

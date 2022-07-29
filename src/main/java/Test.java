@@ -1,12 +1,25 @@
 import java.util.Arrays;
+
 public class Test {
 
     public static void main(String[] args) {
-int[] numbers={5,1,66,12,27,96};
-Arrays.sort(numbers);
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
+        String id = "123,456,345,167";
+        for (String each:
+             id.split(",")) {
+            System.out.println(each);
 
         }
+        //String str = "";
+        //String[] split = id.split(",");
+        //for (int i = 0; i < split.length; i++) {
+        //    System.out.println(str);
+        //    str = str + split[i] + "\",\"";
+        //    System.out.println(str);
+        //}
+        //str=str.substring(0,str.lastIndexOf(","));
+        //String res = "[\"" + str + "]";
+        //System.out.println(res);
+
+
     }
 }

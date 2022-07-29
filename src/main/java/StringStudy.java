@@ -2,13 +2,20 @@
 
 public class StringStudy {
     public static void main(String[] args) {
-//    String s1="abc";
-//    String s2="abc";
-//    s1="hello";
-//        System.out.println(s1);
-        String str="hello";
-        String s1=new String();
-//        new String(char[] a);
+
+        StringBuffer sb = new StringBuffer(120);
+        sb.append("Runoob..");
+        System.out.println(sb);
+        sb.append("!");
+        System.out.println(sb);
+        sb.insert(8,"java");
+        System.out.println(sb);
+        sb.delete(5,8);
+        System.out.println(sb);
+
+        StringBuffer buffer = new StringBuffer("hello world");
+        buffer.append("!");
+        System.out.println(buffer);
 
     }
 }

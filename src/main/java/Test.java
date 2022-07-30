@@ -1,25 +1,45 @@
+import com.alibaba.fastjson.JSONArray;
+
 import java.util.Arrays;
+import java.util.List;
+
+import jdk.nashorn.internal.runtime.ECMAException;
+import org.apache.commons.lang3.StringUtils;
 
 public class Test {
 
-    public static void main(String[] args) {
-        String id = "123,456,345,167";
-        for (String each:
-             id.split(",")) {
-            System.out.println(each);
+    public static void main(String[] args) throws Exception {
+        //String id = "123";
+        String id=null;
+        boolean blank = StringUtils.isBlank(id);
+        System.out.println(blank);
+        System.out.println(id.length());
+        String id2 = "[\"123\"]";
+        String ids="[\"123\",\"456\",\"789\"]";
 
+        String str = "";
+        String[] split = id.split(",");
+        for (int i = 0; i < split.length; i++) {
+            str = str + split[i] + "\",\"";
         }
-        //String str = "";
-        //String[] split = id.split(",");
-        //for (int i = 0; i < split.length; i++) {
-        //    System.out.println(str);
-        //    str = str + split[i] + "\",\"";
-        //    System.out.println(str);
-        //}
-        //str=str.substring(0,str.lastIndexOf(","));
-        //String res = "[\"" + str + "]";
-        //System.out.println(res);
+        str=str.substring(0,str.lastIndexOf(","));
+        String res = "[\"" + str + "]";
+        System.out.println(res);
+
 
 
     }
+
+
+    public static String idRemoveOfBrackets(String id) {
+        return JSONArray.parseArray(id, String.class).get(0);
+    }
+
+    public static List<String> idsStringToArray(String ids) {
+        System.out.println(ids);
+        return JSONArray.parseArray(ids, String.class);
+    }
+
+
+
 }

@@ -9,24 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 public class Test {
 
     public static void main(String[] args) throws Exception {
-        //String id = "123";
-        String id=null;
-        boolean blank = StringUtils.isBlank(id);
-        System.out.println(blank);
-        System.out.println(id.length());
-        String id2 = "[\"123\"]";
-        String ids="[\"123\",\"456\",\"789\"]";
-
-        String str = "";
-        String[] split = id.split(",");
-        for (int i = 0; i < split.length; i++) {
-            str = str + split[i] + "\",\"";
-        }
-        str=str.substring(0,str.lastIndexOf(","));
-        String res = "[\"" + str + "]";
-        System.out.println(res);
-
-
+        System.out.println("hello");
 
     }
 

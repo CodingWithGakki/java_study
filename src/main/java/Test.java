@@ -15,6 +15,8 @@ public class Test {
         System.out.println("master");
         System.out.println("dev2");
 
+        String a="a";
+        int b=1;
     }
 
 

@@ -1,22 +1,44 @@
+import java.util.Arrays;
+import java.util.OptionalInt;
+import java.util.Scanner;
+import java.util.Vector;
+
 public class ArrayStudy {
     public static void main(String[] args) {
-        int a[] = new int[3];
-        int[] a1;
-        double b[];
-        String[] c;
-        a[0] = 1;
-        a[0] = 11;
-        a[1] = 2;
-        a[2] = 3;
-        System.out.println(a[0]);
-        System.out.println(a);
-        String names[];
-        names = new String[3];
-        int arr[] = new int[]{1, 4, 5};
-        int[] arr2 = {1, 3, 4};
-        String namess[] = {"a"};
-        System.out.println(a.length);
+        int arrs[] = {4, 6, 7, 9, 6, 4, 7, 8, 9, 12};
+        Arrays.sort(arrs);
+        for (int i = 0; i < arrs.length; i++) {
+//            System.out.println(arrs[i]);
+        }
+        Vector<Object> v = new Vector<>();
+        v.addElement(new Integer(85));
+        v.addElement(new Integer(98));
+        v.addElement(new Integer(66));
+        v.addElement(new Integer(99));
+        System.out.println(v.elementAt(1));
+        v.sort(null);
+        System.out.println(v.elementAt(1));
 
 
     }
+
+    /**
+     * 判断成绩等级
+     *
+     * @param grade
+     * @param max_score
+     */
+    public static void grade_match(int grade, int max_score) {
+        if (grade >= max_score - 10) {
+            System.out.println("A");
+        } else if (grade >= max_score - 20) {
+            System.out.println("B");
+        } else if (grade >= max_score - 30) {
+            System.out.println("C");
+        } else {
+            System.out.println("D");
+        }
+    }
+
+
 }

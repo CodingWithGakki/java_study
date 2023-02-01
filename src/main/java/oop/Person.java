@@ -35,6 +35,10 @@ public class Person {
         age = 30;
     }
 
+    public Person(){
+        age=18;
+    }
+
     public void study() {
         System.out.println("Studying");
     }
